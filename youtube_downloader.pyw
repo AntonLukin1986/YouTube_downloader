@@ -4,6 +4,8 @@ from tkinter import (
 )
 
 import pytube
+from pytube.cli import on_progress
+
 
 DOWNLOAD_PATH = r'D:\Видео'
 LOGO_PATH = r'D:\dev\my_projects\youtube_downloader\youtube_logo.ico'
@@ -84,7 +86,10 @@ def check_link():
         return
     try:
         # переводим ссылку в нужный формат
-        youtubelink = pytube.YouTube(inputed_link)
+        youtubelink = pytube.YouTube(
+            url=inputed_link,
+            on_progress_callback=on_progress  # отображает прогресс в консоли
+        )
     except Exception:
         error_text = 'Видео не найдено!\nПроверьте правильность ссылки.'
         messagebox.showerror('  Ошибка', error_text)
