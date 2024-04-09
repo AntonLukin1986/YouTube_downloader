@@ -1,5 +1,0 @@
-Создание exe-файла:
-
-pyinstaller --onefile --name="Загрузчик YouTube" --icon="youtube_logo.ico" youtube_downloader.pyw
-
-!!! замена расширения «.py» на «.pyw» приводит к отключению вывода окна консоли при запуске exe-файла в Windows !!!
