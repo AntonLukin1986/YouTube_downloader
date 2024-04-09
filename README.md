@@ -27,4 +27,7 @@ cd ..
 ```
 pyinstaller --onefile --name="Загрузчик YouTube" --icon="youtube_logo.ico" youtube_downloader.pyw
 ```
-7. Запускающий файл **Загрузчик YouTube.exe** появится в папке **dist**
+7. Запускающий приложение файл «**Загрузчик YouTube.exe**» появится в папке **dist**
+
+### Дополнительная информация:
+Замена расширения «.py» на «.pyw» в файле *youtube_downloader* приводит к отключению вывода окна консоли при запуске exe-файла в Windows.
