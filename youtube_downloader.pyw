@@ -7,8 +7,10 @@ import pytube
 from pytube.cli import on_progress
 
 
-DOWNLOAD_PATH = r'D:\Видео'
-LOGO_PATH = r'D:\dev\my_projects\youtube_downloader\youtube_logo.ico'
+DOWNLOAD_PATH = Path(r'D:\Видео')
+if not DOWNLOAD_PATH.is_dir():
+    DOWNLOAD_PATH = Path().home()
+LOGO_PATH = 'youtube_logo.ico'
 
 
 def create_main_window():
@@ -211,4 +213,3 @@ show_next_exit_btns()
 
 if __name__ == '__main__':
     root.mainloop()
-    # https://youtu.be/9OP04Q-z2uY?si=JuLaiNkWvFsdPjuQ
